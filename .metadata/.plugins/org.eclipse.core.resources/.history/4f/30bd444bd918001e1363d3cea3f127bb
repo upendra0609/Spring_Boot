@@ -1,0 +1,23 @@
+package com.sikku.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.sikku.dao.IMongoDbRepo;
+import com.sikku.entity.Employee;
+
+
+@Service()
+public class EmployeeManagementServiceImpl {
+
+	@Autowired
+	private IMongoDbRepo empRepo;
+	
+	
+	public String saveEmp(Employee employee) {
+		System.out.println(empRepo);
+		
+		return "MongoDB Doc is saved with id value: "+empRepo.insert(employee).getEno();
+	}
+
+}

@@ -1,0 +1,18 @@
+package com.sikku.repository;
+
+import org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration;
+import org.springframework.stereotype.Repository;
+
+import com.sikku.document.Employee;
+
+@Repository
+public class EmployeeRepoImpl implements IEmployeeRepo {
+
+	
+	@Override
+	public String save(Employee emp) {
+		
+		return null;
+	}
+
+}

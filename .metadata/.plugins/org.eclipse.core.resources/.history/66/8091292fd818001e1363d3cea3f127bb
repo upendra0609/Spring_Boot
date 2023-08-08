@@ -1,0 +1,26 @@
+package com.sikku.test;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.sikku.entity.Employee;
+import com.sikku.service.EmployeeManagementServiceImpl; 
+
+@SpringBootApplication
+public class Test {
+
+	public static void main(String[] args) {
+	
+		
+		
+		SpringApplication.run(Test.class, args);
+		
+		Employee emp = new Employee();
+		emp.setEno("100");
+		emp.setEname("aaa");
+		
+		new EmployeeManagementServiceImpl().saveEmp(emp);
+		
+	}
+
+}

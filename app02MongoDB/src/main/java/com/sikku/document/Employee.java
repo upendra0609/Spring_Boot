@@ -1,0 +1,31 @@
+package com.sikku.document;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import lombok.Data;
+
+@Document(collection  = "emp")
+@Data
+public class Employee {
+	@Id
+	private String eno;
+	private String ename;
+
+	public String getEno() {
+		return eno;
+	}
+
+	public void setEno(String eno) {
+		this.eno = eno;
+	}
+
+	public String getEname() {
+		return ename;
+	}
+
+	public void setEname(String ename) {
+		this.ename = ename;
+	}
+
+}

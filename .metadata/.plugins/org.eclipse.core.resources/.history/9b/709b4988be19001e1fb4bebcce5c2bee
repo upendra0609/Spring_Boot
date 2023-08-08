@@ -1,0 +1,8 @@
+package com.sikku.repository;
+
+import com.sikku.document.Employee;
+
+public interface IEmployeeRepo {
+	public String save(Employee emp);
+
+}

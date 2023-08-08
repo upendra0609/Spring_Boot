@@ -1,0 +1,17 @@
+package com.sikku.service;
+
+import org.springframework.stereotype.Service;
+
+import com.sikku.repository.IEmployeeRepo;
+
+@Service("empService")
+public class EmployeeService {
+	
+	private IEmployeeRepo repo;
+	
+	public void save() {
+		
+		
+	}
+
+}

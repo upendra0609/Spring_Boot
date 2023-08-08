@@ -1,0 +1,6 @@
+package com.sikku.service;
+
+public interface IEmployeeService {
+
+	String save(Employee emp);
+}

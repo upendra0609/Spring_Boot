@@ -1,0 +1,6 @@
+package com.sikku.repository;
+
+public interface IEmployeeRepo {
+	public String save(Employee emp);
+
+}

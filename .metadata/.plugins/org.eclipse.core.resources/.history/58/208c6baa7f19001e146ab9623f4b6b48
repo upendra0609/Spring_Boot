@@ -1,0 +1,13 @@
+package com.sikku.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import com.sikku.document.User;
+
+public interface IUserService {
+	
+	public String insertUser(User user);
+	public String findUser(String uname);
+
+}

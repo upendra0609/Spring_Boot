@@ -1,0 +1,40 @@
+package com.sikku.service;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.sikku.document.User;
+import com.sikku.repository.IUserRepo;
+
+@Service("userService")
+public class UserServiceImpl implements IUserService {
+
+	@Autowired
+	private IUserRepo repo;
+
+	@Override
+	public String insertUser(User user) {
+		return repo.insert(user).getUname();
+	}
+
+	@Override
+	public String findUser(User user) {
+
+		String status = "";
+		Optional<User> findById = repo.findById(user.getUname());
+		if (findById.isEmpty()) {
+			status = "User does not exist";
+		} else {
+			User user1 = findById.get();
+			if (user.getUname().equals(user1.getUname()) && user.getUpwd().equals(user1.getUpwd())) {
+				status = "Login Success";
+			} else {
+				status = "Login Failed";
+			}
+		}
+		return status;
+	}
+
+}

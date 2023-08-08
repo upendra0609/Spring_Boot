@@ -1,0 +1,46 @@
+package com.sikku.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.AutoConfiguration;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.sikku.document.User;
+import com.sikku.service.UserServiceImpl;
+
+@Controller
+@AutoConfiguration
+public class UserController {
+
+	@Autowired
+	private UserServiceImpl userService;
+
+	@RequestMapping(value = "/hello", method = RequestMethod.GET)
+	public String insertForm() {
+		return "insertform";
+	}
+
+	@RequestMapping(value = "/insert", method = RequestMethod.POST)
+	public String loginForm(@RequestParam String uname, @RequestParam String upwd) {
+		User user = new User();
+		user.setEno(uname);
+		user.setUname(uname);
+		user.setUpwd(upwd);
+		String insertUser = userService.insertUser(user);
+		return "loginform";
+	}
+
+	@RequestMapping(value = "/login", method = RequestMethod.POST)
+	public ModelAndView login(@RequestParam String uname, @RequestParam String upwd) {
+		User user = new User();
+		user.setUname(uname);
+		user.setUpwd(upwd);
+		String status = "";
+		status = userService.findUser(user);
+
+		return new ModelAndView("status", "status", status);
+	}
+}

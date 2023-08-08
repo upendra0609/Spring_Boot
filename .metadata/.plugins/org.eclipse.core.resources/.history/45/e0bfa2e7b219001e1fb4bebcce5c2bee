@@ -1,0 +1,13 @@
+package com.sikku.repository;
+
+import com.sikku.document.Employee;
+
+public class EmployeeRepoImpl implements IEmployeeRepo {
+
+	@Override
+	public String save(Employee emp) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

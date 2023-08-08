@@ -1,0 +1,12 @@
+package com.sikku.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class EmployeeController {
+
+	public String save() {
+		String status="";
+		return status;
+	}
+}

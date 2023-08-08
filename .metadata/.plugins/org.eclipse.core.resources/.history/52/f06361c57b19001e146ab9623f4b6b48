@@ -1,0 +1,40 @@
+package com.sikku.controller;
+
+import org.springframework.boot.autoconfigure.AutoConfiguration;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.sikku.service.UserServiceImpl;
+
+@Controller
+@AutoConfiguration
+public class UserController {
+	
+	private UserServiceImpl userService;
+
+	@RequestMapping(value ="/insert", method = RequestMethod.GET)
+	public String loginForm(@RequestParam String uname, @RequestParam String upwd) {
+		return "loginform";
+	}
+	
+	@RequestMapping(value ="/hello", method = RequestMethod.GET)
+	public String insertForm() {
+		return "insertform";
+	}
+	
+	@RequestMapping(value = "/login", method = RequestMethod.POST)
+	public ModelAndView login(@RequestParam String uname, @RequestParam String upwd) {
+		String status = "";
+		
+		if(uname.equals("sikku") && upwd.equals("sikku")) {
+			status = "Login Success";
+		}else {
+			status = "Login Failed";
+			
+		}
+		return new ModelAndView("status","status", status);
+	}
+}

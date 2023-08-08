@@ -1,0 +1,9 @@
+package com.sikku.dao;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+import com.sikku.entity.Employee;
+
+public interface IMongoDbRepo extends MongoRepository<Employee, String> {
+
+}

@@ -1,0 +1,13 @@
+package com.sikku.service;
+
+import com.sikku.document.Employee;
+
+public class EmployeeServiceImpl implements IEmployeeService {
+
+	@Override
+	public String save(Employee emp) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

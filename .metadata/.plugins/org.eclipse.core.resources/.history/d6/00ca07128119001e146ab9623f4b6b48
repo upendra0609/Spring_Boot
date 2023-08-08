@@ -1,0 +1,9 @@
+package com.sikku.reposotory;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+import com.sikku.document.User;
+
+public interface IUserRepo extends MongoRepository<User, String> {
+
+}

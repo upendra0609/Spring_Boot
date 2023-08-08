@@ -1,0 +1,35 @@
+package com.sikku.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.sikku.document.User;
+import com.sikku.reposotory.IUserRepo;
+
+@Service("userService")
+public class UserServiceImpl implements IUserService {
+
+	@Autowired
+	private IUserRepo repo;
+
+	@Override
+	public String insertUser(User user) {
+		return repo.insert(user).getUname();
+	}
+
+	@Override
+	public String findUser(String uname) {
+
+		Optional<User> findById = repo.findById(uname);
+		if (findById.isEmpty()) {
+			return "";
+		} else {
+			String optional = findById.toString();
+			return optional;
+		}
+	}
+
+}

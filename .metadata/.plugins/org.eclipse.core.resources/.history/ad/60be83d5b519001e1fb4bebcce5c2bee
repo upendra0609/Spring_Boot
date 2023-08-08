@@ -1,0 +1,33 @@
+package com.sikku.repository;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+import com.sikku.document.Employee;
+
+@Repository
+public class EmployeeRepoImpl implements IEmployeeRepo {
+
+	@Autowired
+	private JdbcTemplate template;
+
+	@Override
+	public String save(Employee emp) {
+		try {
+			String query = "select * from employee where ENAME ="+emp.getEname()+"";
+			template.query(query, (rs,rowNum)->{
+				Employee emp1 = new Employee();
+				emp1.setEno(rs.getInt("ENO"));
+				emp1.setEno(rs.getString("ENAME"));
+				emp1.setEno(rs.getFloat("ESAL"));
+				emp1.setEno(rs.getString("EADDR"));
+			});
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+}

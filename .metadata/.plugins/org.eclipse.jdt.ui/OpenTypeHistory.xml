@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=app04LoginMongoDb/C:\/Users\/upendra singh\/.m2\/repository\/org\/springframework\/data\/spring-data-mongodb\/4.1.1\/spring-data-mongodb-4.1.1.jar=/maven.pomderived=/true=/=/maven.groupId=/org.springframework.data=/=/maven.artifactId=/spring-data-mongodb=/=/maven.version=/4.1.1=/=/maven.scope=/compile=/=/maven.pomderived=/true=/&lt;org.springframework.data.mongodb.repository(MongoRepository.class[MongoRepository" modifiers="1537" timestamp="1688313857788"/>
+    <typeInfo handle="=app04LoginMongoDb/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.sikku.service{IUserService.java[IUserService" modifiers="513" timestamp="1688374678927"/>
+    <typeInfo handle="=app04JDBC/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.sikku.repository{IEmployeeRepo.java[IEmployeeRepo" modifiers="513" timestamp="1688402271684"/>
+    <typeInfo handle="=app04JDBC/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.sikku.service{IEmployeeService.java[IEmployeeService" modifiers="513" timestamp="1688402271702"/>
+    <typeInfo handle="=app04SpringJDBC/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.sikku.repository{IEmployeeRepo.java[IEmployeeRepo" modifiers="513" timestamp="1688454769069"/>
+    <typeInfo handle="=app04SpringJDBC/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.sikku.service{IEmployeeService.java[IEmployeeService" modifiers="513" timestamp="1688454980637"/>
+</typeInfoHistroy>

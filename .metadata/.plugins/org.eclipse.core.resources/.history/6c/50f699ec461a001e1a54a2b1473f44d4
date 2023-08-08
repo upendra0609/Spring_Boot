@@ -1,0 +1,31 @@
+package com.sikku.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.sikku.document.Employee;
+import com.sikku.service.IEmployeeService;
+
+@RestController
+public class EmployeeController {
+
+	@Autowired
+	private IEmployeeService employeeService;
+
+	@RequestMapping(value = "/save", method = RequestMethod.GET)
+	public boolean save() {
+		String status = "";
+
+		Employee emp = new Employee();
+		emp.setEno(10560);
+		emp.setEname("AAA");
+		emp.setEsal(12500.5f);
+		emp.setEaddr("satna");
+		boolean save1 = employeeService.save1(emp);
+//		status = search.toString();
+
+		return save1;
+	}
+}

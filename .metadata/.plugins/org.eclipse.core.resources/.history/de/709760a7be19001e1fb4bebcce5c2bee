@@ -1,0 +1,9 @@
+package com.sikku.service;
+
+import org.springframework.stereotype.Service;
+
+@Service("empService")
+public interface IEmployeeService {
+	public String save(Employee emp);
+
+}

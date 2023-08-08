@@ -1,0 +1,26 @@
+package com.sikku.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.AutoConfiguration;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.sikku.document.Employee;
+import com.sikku.service.EmployeeService;
+
+@RestController
+@AutoConfiguration
+public class MyController {
+	
+	@Autowired
+	private EmployeeService service;
+
+	@RequestMapping("/save")
+	public String wish() {
+		Employee emp = new Employee();
+		emp.setEname("AAA");
+		service.save(emp);
+		return "<h1>sts</h1>";
+	}
+}
